@@ -1,12 +1,17 @@
 package com.example.spring6;
 
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.lang.reflect.InvocationTargetException;
 
 public class TestUser {
+
+    // Create Logger object
+    private Logger logger = LoggerFactory.getLogger(TestUser.class);
 
     @Test
     public void testUserObject() {
@@ -20,6 +25,9 @@ public class TestUser {
         // Call methods on the bean and test the results
         System.out.print("2:");
         user.add();
+
+        // Manually write the log
+        logger.info("### Success called and executed");
     }
 
     // Reflection construction
