@@ -2,6 +2,10 @@ package com.example.spring6;
 
 public class User {
 
+    private String name;
+
+    private Person person;
+
     // Zero Constructor
     public User() {
         System.out.println("0: Zero Constructor Executed");
