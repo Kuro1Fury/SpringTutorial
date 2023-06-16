@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--Create User
+        bean id: name of the bean
+            id property: unique identifier
+            class property: path (package + class name)
+    -->
+    <bean id="user" class="com.example.springfirst.User">
+        <property name="name" value="John"/>
+    </bean>
+</beans>
