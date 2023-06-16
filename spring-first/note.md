@@ -23,3 +23,6 @@ Failed to connect to github.com port 443 after 21106 ms: Timed out
 
 Solution:
 git config --global http.sslVerify "false"
+
+in cmd:
+ipconfig /flushdns
