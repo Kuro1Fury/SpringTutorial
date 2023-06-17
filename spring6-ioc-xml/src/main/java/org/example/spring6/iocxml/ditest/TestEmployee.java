@@ -6,8 +6,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestEmployee {
 
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("bean-ditest.xml");
-        Employee employee = context.getBean("employee3", Employee.class);
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean-diarray.xml");
+        Employee employee = context.getBean("employee", Employee.class);
         employee.work();
     }
 }

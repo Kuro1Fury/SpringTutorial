@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dept" class="org.example.spring6.iocxml.ditest.Department">
+        <property name="dname" value="IT"/>
+    </bean>
+
+    <!-- 1. array injection -->
+    <bean id="employee" class="org.example.spring6.iocxml.ditest.Employee">
+        <!-- Normal property -->
+        <property name="ename" value="John"/>
+        <property name="age" value="30"/>
+        <!-- Object property -->
+        <property name="dept" ref="dept"></property>
+        <!-- Array property -->
+        <property name="hobbies">
+            <array>
+                <value>Eat</value>
+                <value>Sleep</value>
+                <value>Coding</value>
+            </array>
+        </property>
+    </bean>
+
+</beans>

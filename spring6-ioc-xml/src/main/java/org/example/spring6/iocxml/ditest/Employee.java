@@ -1,5 +1,7 @@
 package org.example.spring6.iocxml.ditest;
 
+import java.util.Arrays;
+
 public class Employee {
 
     // Employee belongs to a particular department
@@ -8,6 +10,11 @@ public class Employee {
     private Department dept;
     private String ename;
     private Integer age;
+    private String[] hobbies;
+
+    public void setHobbies(String[] hobbies) {
+        this.hobbies = hobbies;
+    }
 
     public Department getDept() {
         return dept;
@@ -36,5 +43,6 @@ public class Employee {
     public void work() {
         System.out.println("employee work: " + ename + ", " + age);
         dept.info();
+        System.out.println(Arrays.toString(hobbies));
     }
 }
