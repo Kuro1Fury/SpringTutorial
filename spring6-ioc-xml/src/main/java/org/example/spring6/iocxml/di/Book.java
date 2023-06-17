@@ -4,6 +4,7 @@ public class Book {
 
     private String bname;
     private String author;
+    private String other;
 
     // Generate constructors
     public Book() {
@@ -26,11 +27,16 @@ public class Book {
         this.author = author;
     }
 
+    public void setOther(String other) {
+        this.other = other;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
                 "bname='" + bname + '\'' +
                 ", author='" + author + '\'' +
+                ", other='" + other + '\'' +
                 '}';
     }
 

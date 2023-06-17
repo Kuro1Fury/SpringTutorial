@@ -7,6 +7,18 @@
     <bean id="book" class="org.example.spring6.iocxml.di.Book">
         <property name="bname" value="spring learning"/>
         <property name="author" value="Zihe"/>
+        <!-- null -->
+<!--        <property name="other">-->
+<!--            <null/>-->
+<!--        </property>-->
+
+        <!-- special character -->
+<!--        <property name="other" value="&lt;&gt;"/>-->
+
+        <!-- CDATA -->
+        <property name="other">
+            <value><![CDATA[a < b]]></value>
+        </property>
     </bean>
 
     <!-- 2. Constructor DI -->
