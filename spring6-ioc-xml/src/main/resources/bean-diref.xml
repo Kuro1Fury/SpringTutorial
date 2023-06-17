@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--
+        Step 1. Create objects (Student, Teacher, Course)
+        Step 2. Inject normal property
+        Step 3. Use util for property and definition
+        Step 4. Include util in Student bean and inject for list and map
+    -->
+    <bean id="course" class="org.example.spring6.iocxml.dimap.Course">
+        <property name="cname" value="Java"/>
+    </bean>
+    <bean id="course2" class="org.example.spring6.iocxml.dimap.Course">
+        <property name="cname" value="Python"/>
+    </bean>
+
+    <bean id="teacher" class="org.example.spring6.iocxml.dimap.Teacher">
+        <property name="tname" value="Perkins"/>
+        <property name="tid" value="1"/>
+    </bean>
+    <bean id="teacher2" class="org.example.spring6.iocxml.dimap.Teacher">
+        <property name="tname" value="Mike"/>
+        <property name="tid" value="2"/>
+    </bean>
+
+    <bean id="student" class="org.example.spring6.iocxml.dimap.Student">
+        <property name="sid" value="10000"></property>
+        <property name="sname" value="Tom"></property>
+
+        <!-- Inject List and Map property -->
+        <property name="courseList" ref="courseList"></property>
+
+        <property name="teacherMap" ref="teacherMap"></property>
+    </bean>
+
+    <util:list id="courseList">
+        <ref bean="course"/>
+        <ref bean="course2"/>
+    </util:list>
+
+    <util:map id="teacherMap">
+        <entry>
+            <key>
+                <value>10010</value>
+            </key>
+            <ref bean="teacher"/>
+        </entry>
+        <entry>
+            <key>
+                <value>10011</value>
+            </key>
+            <ref bean="teacher2"/>
+        </entry>
+    </util:map>
+</beans>
