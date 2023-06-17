@@ -8,7 +8,7 @@ pom.xml under spring-first is not recognized as maven project.
 1. Check the import as import org.springframework.context.ApplicationContext;
 2. Right click pom.xml -> Add as maven project (https://stackoverflow.com/questions/49617509/intellij-does-not-find-pom-xml-file)
 
-
+&emsp;
 
 ### Issue #2:
 OpenSSL SSL_read: Connection was reset, errno 10054
@@ -16,7 +16,7 @@ OpenSSL SSL_read: Connection was reset, errno 10054
 #### Solution:
 ```git config --global http.sslVerify "false"```
 
-
+&emsp;
 
 ### Issue #3:
 Failed to connect to github.com port 443 after 21106 ms: Timed out
@@ -27,15 +27,15 @@ Failed to connect to github.com port 443 after 21106 ms: Timed out
 in cmd:
 ```ipconfig /flushdns```
 
-
+&emsp;
 
 ### Issue #4:
 packaging with value jar is invalid
 
 #### Solution:
-1. In parent pom.xml, add <packaging>pom</packaging>
+1. In parent pom.xml, add ```<packaging>pom</packaging>```
 
-
+&emsp;
 
 ### Issue #5:
 Failed to inherit parent module's dependency to child module
