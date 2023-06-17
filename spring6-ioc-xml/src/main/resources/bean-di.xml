@@ -6,6 +6,12 @@
     <!-- 1. Setter DI -->
     <bean id="book" class="org.example.spring6.iocxml.di.Book">
         <property name="bname" value="spring learning"/>
-        <property name="author" value="Ji"/>
+        <property name="author" value="Zihe"/>
+    </bean>
+
+    <!-- 2. Constructor DI -->
+    <bean id="bookCtr" class="org.example.spring6.iocxml.di.Book">
+        <constructor-arg name="bname" value="GRT component"/>
+        <constructor-arg name="author" value="Allan"/>
     </bean>
 </beans>

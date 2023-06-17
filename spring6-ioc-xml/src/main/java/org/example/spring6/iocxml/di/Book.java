@@ -7,10 +7,12 @@ public class Book {
 
     // Generate constructors
     public Book() {
-
+        System.out.println("Zero constructor is called");
     }
 
+    // Constructor with arguments
     public Book(String bname, String author) {
+        System.out.println("Constructor with arguments is called.");
         this.bname = bname;
         this.author = author;
     }
