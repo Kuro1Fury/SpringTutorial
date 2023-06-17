@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    Method 1: include external bean
+        Step 1. Create Department and Employee object
+        Step 2. In employee's label, use property to include department's bean
+    -->
+    <bean id="department" class="org.example.spring6.iocxml.ditest.Department">
+        <property name="dname" value="Security"></property>
+    </bean>
+
+    <bean id="employee" class="org.example.spring6.iocxml.ditest.Employee">
+        <!-- Normal property injection -->
+        <property name="ename" value="John"></property>
+        <property name="age" value="50"></property>
+        <!-- Object property injection -->
+        <property name="dept" ref="department"></property>
+    </bean>
+
+    <!-- Method 2: include Internal bean -->
+    <bean id="department2" class="org.example.spring6.iocxml.ditest.Department">
+        <property name="dname" value="Finance"></property>
+    </bean>
+
+    <bean id="employee2" class="org.example.spring6.iocxml.ditest.Employee">
+        <!-- Normal property injection -->
+        <property name="ename" value="Mary"></property>
+        <property name="age" value="20"></property>
+
+        <!-- Internal bean -->
+        <property name="dept">
+            <bean id="department2" class="org.example.spring6.iocxml.ditest.Department">
+                <property name="dname" value="Finance"></property>
+            </bean>
+        </property>
+    </bean>
+
+    <!-- Method 3: Cascading property injection -->
+    <bean id="department3" class="org.example.spring6.iocxml.ditest.Department">
+        <property name="dname" value="IT"></property>
+    </bean>
+
+    <bean id="employee3" class="org.example.spring6.iocxml.ditest.Employee">
+        <property name="ename" value="Caleb"></property>
+        <property name="age" value="10"></property>
+        <property name="dept" ref="department3"></property>
+        <property name="dept.dname" value="Test"></property> <!-- Cascading property injection -->
+    </bean>
+
+</beans>
