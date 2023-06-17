@@ -26,3 +26,34 @@ git config --global http.sslVerify "false"
 
 in cmd:
 ipconfig /flushdns
+
+
+
+Issue #4:
+packaging with value jar is invalid
+
+Solution:
+1. In parent pom.xml, add <packaging>pom</packaging>
+
+
+
+Issue #5:
+Failed to inherit parent module's dependency to child module
+
+Solution:
+1. Make sure the child module is a module and detected by maven
+2. In parent pom.xml, add 
+```     
+    <modules>
+        <module>spring-first</module>
+    </modules>
+```
+3. In child pom.xml, add
+```
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>Spring6</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+```
+(https://stackoverflow.com/questions/69835342/maven-why-are-dependencies-declared-in-parent-pom-not-inherited-by-child-pom)
