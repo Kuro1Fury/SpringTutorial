@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        Step 1. Construct objects (teacher and student)
+        Step 2. Inject normal property
+        Step 3. Inject student bean map property
+    -->
+
+    <bean id="teacher" class="org.example.spring6.iocxml.dimap.Teacher">
+        <!-- Normal property -->
+        <property name="tid" value="1"/>
+        <property name="tname" value="Perkins"/>
+    </bean>
+
+    <bean id="teacher2" class="org.example.spring6.iocxml.dimap.Teacher">
+        <!-- Normal property -->
+        <property name="tid" value="2"/>
+        <property name="tname" value="Mike"/>
+    </bean>
+
+    <bean id="student" class="org.example.spring6.iocxml.dimap.Student">
+        <!-- Normal property -->
+        <property name="sid" value="100"/>
+        <property name="sname" value="Zihe"/>
+        <!-- Map property -->
+        <property name="teacherMap">
+            <map>
+                <entry>
+                    <key>
+                        <value>10010</value>
+                    </key>
+                    <ref bean="teacher"></ref>
+                </entry>
+                <entry>
+                    <key>
+                        <value>10011</value>
+                    </key>
+                    <ref bean="teacher2"></ref>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+</beans>
