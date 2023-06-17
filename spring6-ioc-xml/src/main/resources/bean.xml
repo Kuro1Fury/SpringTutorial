@@ -2,7 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <!--user object construction-->
-    <bean id="user" class="org.example.spring6.iocxml.User">
-    </bean>
+    <!-- 1. Get bean, user object construction -->
+    <bean id="user" class="org.example.spring6.iocxml.User"></bean>
+
+    <bean id="user1" class="org.example.spring6.iocxml.User"></bean>
+
+    <!-- 2. Get implementation class of interface -->
+    <bean id="userJiImpl" class="org.example.spring6.iocxml.bean.UserJiImpl"></bean>
+    <bean id="personJiImpl" class="org.example.spring6.iocxml.bean.PersonJiImpl"></bean>
 </beans>

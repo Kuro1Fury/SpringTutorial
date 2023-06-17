@@ -13,8 +13,8 @@ public class TestUser {
         User user1 = (User) context.getBean("user");
         System.out.println("by id: " + user1);
 
-        // (ii) by class
-        User user2 = context.getBean(User.class);
+        // (ii) by class (need to be unique for each class)
+        User user2 = context.getBean(User.class); // fail if user and user1 are both User class
         System.out.println("by class: " + user2);
 
         // (iii) by id and class
