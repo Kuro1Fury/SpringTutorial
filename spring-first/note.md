@@ -22,7 +22,13 @@ OpenSSL SSL_read: Connection was reset, errno 10054
 Failed to connect to github.com port 443 after 21106 ms: Timed out
 
 #### Solution:
-```git config --global http.sslVerify "false"```
+```
+git config --global http.sslVerify "false"
+git config --global http.proxy http://127.0.0.1
+git config --global http.proxy https://127.0.0.1
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
 
 in cmd:
 ```ipconfig /flushdns```
