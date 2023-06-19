@@ -6,4 +6,7 @@
     <bean id="user" class="org.example.spring6.iocxml.life.User" scope="singleton" init-method="initMethod" destroy-method="destroyMethod">
         <property name="name" value="Lucy"></property>
     </bean>
+
+    <!-- bean post processor -->
+    <bean id="myBeanProcessor" class="org.example.spring6.iocxml.life.MyBeanPost"></bean>
 </beans>

@@ -3365,3 +3365,25 @@ Caused by: java.io.FileNotFoundException: http://www.springframework.org/schema/
 2023-06-19 at 11:36:10 CST DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions - Loaded 1 bean definitions from class path resource [bean-life.xml]
 2023-06-19 at 11:36:10 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'user'
 2023-06-19 at 11:36:10 CST DEBUG org.springframework.context.support.AbstractApplicationContext 1029 doClose - Closing org.springframework.context.support.ClassPathXmlApplicationContext@e3c0e40, started on Mon Jun 19 11:36:10 CST 2023
+2023-06-19 at 12:24:24 CST DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@e3c0e40
+2023-06-19 at 12:24:24 CST DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions - Loaded 1 bean definitions from class path resource [bean-life.xml]
+2023-06-19 at 12:24:24 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'user'
+2023-06-19 at 12:24:24 CST DEBUG org.springframework.context.support.AbstractApplicationContext 1029 doClose - Closing org.springframework.context.support.ClassPathXmlApplicationContext@e3c0e40, started on Mon Jun 19 12:24:24 CST 2023
+2023-06-19 at 12:27:52 CST DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@e3c0e40
+2023-06-19 at 12:27:52 CST DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions - Loaded 2 bean definitions from class path resource [bean-life.xml]
+2023-06-19 at 12:27:52 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'myBeanProcessor'
+2023-06-19 at 12:27:52 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'user'
+2023-06-19 at 12:27:52 CST DEBUG org.springframework.context.support.AbstractApplicationContext 1029 doClose - Closing org.springframework.context.support.ClassPathXmlApplicationContext@e3c0e40, started on Mon Jun 19 12:27:52 CST 2023
+2023-06-19 at 14:57:49 CST DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@e3c0e40
+2023-06-19 at 14:57:49 CST DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions - Loaded 1 bean definitions from class path resource [bean-factorybean.xml]
+2023-06-19 at 14:57:49 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'user'
+2023-06-19 at 15:59:04 CST DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@e3c0e40
+2023-06-19 at 15:59:04 CST DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions - Loaded 3 bean definitions from class path resource [bean-auto.xml]
+2023-06-19 at 15:59:04 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'userController'
+2023-06-19 at 15:59:04 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'userService'
+2023-06-19 at 15:59:04 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'userDao'
+2023-06-19 at 16:01:28 CST DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@e3c0e40
+2023-06-19 at 16:01:28 CST DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions - Loaded 3 bean definitions from class path resource [bean-auto.xml]
+2023-06-19 at 16:01:28 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'userController'
+2023-06-19 at 16:01:28 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'userService'
+2023-06-19 at 16:01:28 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'userDao'
