@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- Enable annotation -->
+    <context:component-scan base-package="com.example"/>
+
+    <!-- Exclude particular components -->
+<!--    <context:component-scan base-package="com.example.spring6">-->
+<!--        &lt;!&ndash; context:exclude-filter label: exclude rule &ndash;&gt;-->
+<!--        &lt;!&ndash;-->
+<!--             type：set exclude or include rule-->
+<!--            type="annotation", exclude by annotation, set class name that needed to be excluded in the expression-->
+<!--            type="assignable"，exclude by type, set class name that needed to be excluded in the expression-->
+<!--        &ndash;&gt;-->
+<!--        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
+<!--        &lt;!&ndash;<context:exclude-filter type="assignable" expression="com.example.spring6.controller.UserController"/>&ndash;&gt;-->
+<!--    </context:component-scan>-->
+
+
+    <!-- Include particular components -->
+<!--    <context:component-scan base-package="com.example" use-default-filters="false">-->
+<!--        &lt;!&ndash; context:include-filter label, set extra rules &ndash;&gt;-->
+<!--        &lt;!&ndash; use-default-filters label: if false, disable default rule &ndash;&gt;-->
+<!--        &lt;!&ndash; Needed: use-default-filters="false", since default rule scan every classes under the package &ndash;&gt;-->
+<!--        &lt;!&ndash;-->
+<!--             type：set exclude or include rule-->
+<!--            type="annotation", exclude by annotation, set class name that needed to be excluded in the expression-->
+<!--            type="assignable", exclude by type, set class name that needed to be excluded in the expression-->
+<!--        &ndash;&gt;-->
+<!--        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
+<!--        &lt;!&ndash;<context:include-filter type="assignable" expression="com.example.spring6.controller.UserController"/>&ndash;&gt;-->
+<!--    </context:component-scan>-->
+</beans>
