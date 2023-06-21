@@ -1,8 +1,7 @@
-package com.example.spring6.aop.annoaop;
+package com.example.spring6.aop.xmlaop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
@@ -13,42 +12,34 @@ import java.util.Arrays;
 @Component // ioc container
 public class LogAspect {
 
-    // Set pointcut and advice type
-    // Pointcut expression: execution(<public/private> <return type> <package name>.<class name>.<method name>(<parameters>))
-    // advice types:
-    // before: @Before(value="pointcut expression")
-    @Before(value="com.example.spring6.aop.annoaop.LogAspect.pointcut()")
+    // before advice
     public void beforeMethod(JoinPoint joinPoint) {
         String methodName = joinPoint.getSignature().getName();
         Object[] args = joinPoint.getArgs();
         System.out.println("Logger --> before method. Method name: " + methodName + ", args: " + Arrays.toString(args));
     }
 
-    // after: @After()
-    @After(value="pointcut()")
+    // after advice
     public void afterMethod(JoinPoint joinPoint) {
         String methodName = joinPoint.getSignature().getName();
         System.out.println("Logger --> after method. Method name: " + methodName);
     }
 
 
-    // return: @AfterReturning()
-    @AfterReturning(value="execution(public int com.example.spring6.aop.annoaop.CalculatorImpl.*(..))", returning="result")
+    // return advice
+    // Get target method return value
     public void afterReturningMethod(JoinPoint joinPoint, Object result) {
         String methodName = joinPoint.getSignature().getName();
         System.out.println("Logger --> after returning method. Method name: " + methodName + ", result: " + result);
     }
 
-    // exception: @AfterThrowing() (get error message)
-    // Execute this method when exception is thrown
-    @AfterThrowing(value="execution(public int com.example.spring6.aop.annoaop.CalculatorImpl.*(..))", throwing="ex")
+    // exception advice
     public void afterThrowingMethod(JoinPoint joinPoint, Exception ex) {
         String methodName = joinPoint.getSignature().getName();
         System.out.println("Logger --> after throwing method. Method name: " + methodName + ", exception: " + ex);
     }
 
-    // around: @Around()
-    @Around(value="execution(public int com.example.spring6.aop.annoaop.CalculatorImpl.*(..))")
+    // around advice
     public Object aroundMethod(ProceedingJoinPoint joinPoint) {
         String methodName = joinPoint.getSignature().getName();
         Object[] args = joinPoint.getArgs();
@@ -72,6 +63,6 @@ public class LogAspect {
     }
 
     // Reuse pointcut expression
-    @Pointcut(value="execution(public int com.example.spring6.aop.annoaop.CalculatorImpl.*(..))")
+    @Pointcut(value="execution(public int com.example.spring6.aop.xmlaop.CalculatorImpl.*(..))")
     public void pointcut() {}
 }
