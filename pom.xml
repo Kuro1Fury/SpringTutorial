@@ -19,6 +19,7 @@
         <module>spring6-ioc-annotation</module>
         <module>spring6-reflect</module>
         <module>spring6-aop</module>
+        <module>spring6-junit</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -30,12 +31,26 @@
             <version>6.0.2</version>
         </dependency>
 
+        <!--spring junit integration-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>6.0.2</version>
+        </dependency>
+
 
         <!--junit-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.6.3</version>
+        </dependency>
+
+        <!--junit4-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
         </dependency>
 
         <!--log4j-->
