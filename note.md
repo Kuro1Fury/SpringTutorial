@@ -38,6 +38,7 @@ in cmd:
 git config --global http.proxy http://127.0.0.1:7890
 git config --global https.proxy http://127.0.0.1:7890
 ``` 
+https://www.zhihu.com/question/27159393
 
 &emsp;
 
