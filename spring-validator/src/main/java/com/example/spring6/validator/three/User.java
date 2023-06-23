@@ -1,5 +1,6 @@
 package com.example.spring6.validator.three;
 
+import com.example.spring6.validator.four.CannotBlank;
 import jakarta.validation.constraints.*;
 
 public class User {
@@ -14,6 +15,19 @@ public class User {
     @Pattern(regexp = "^1(3|4|5|7|8)\\d{9}$",message = "format error")
     @NotBlank(message = "phone number cannot be empty")
     private String phone;
+
+    @CannotBlank
+    private String message;
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+
 
     public String getName() {
         return name;

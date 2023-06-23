@@ -13,6 +13,8 @@ public class TestUser {
         User user = new User();
         user.setName("Allan");
         user.setPhone("13123456789");
+        user.setAge(100);
+        user.setMessage("hello world");
         myService.testMethod(user);
     }
 }
