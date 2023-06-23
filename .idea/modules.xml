@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Spring6.iml" filepath="$PROJECT_DIR$/Spring6.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-jdbc-tx.iml" filepath="$PROJECT_DIR$/spring-jdbc-tx.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring6-aop.iml" filepath="$PROJECT_DIR$/spring6-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring6-i18n.iml" filepath="$PROJECT_DIR$/spring6-i18n.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring6-ioc-annotation.iml" filepath="$PROJECT_DIR$/spring6-ioc-annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring6-ioc-xml.iml" filepath="$PROJECT_DIR$/spring6-ioc-xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring6-junit.iml" filepath="$PROJECT_DIR$/spring6-junit.iml" />

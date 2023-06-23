@@ -22,6 +22,7 @@
         <module>spring6-junit</module>
         <module>spring-jdbc-tx</module>
         <module>spring6-resource</module>
+        <module>spring6-i18n</module>
     </modules>
 
     <packaging>pom</packaging>
