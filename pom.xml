@@ -23,6 +23,7 @@
         <module>spring-jdbc-tx</module>
         <module>spring6-resource</module>
         <module>spring6-i18n</module>
+        <module>spring-validator</module>
     </modules>
 
     <packaging>pom</packaging>
