@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Messages_zh_CN.properties" removed="false">
+          <file>file://$MODULE_DIR$/spring6-i18n/src/main/resources/messages_zh_CN.properties.xml</file>
+          <file>file://$MODULE_DIR$/spring6-i18n/src/main/resources/messages_en_GB.properties.xml</file>
+          <file>file://$MODULE_DIR$/spring6-i18n/src/main/resources/bean.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
+</module>
