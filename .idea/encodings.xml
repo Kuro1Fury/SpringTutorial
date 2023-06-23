@@ -13,5 +13,7 @@
     <file url="file://$PROJECT_DIR$/spring6-junit/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring6-reflect/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring6-reflect/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-resource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-resource/src/main/resources" charset="UTF-8" />
   </component>
 </project>
